@@ -1,14 +1,24 @@
 import { NavLink } from "react-router-dom";
 import './NavBar.css'
 import { AiOutlineLogin } from "react-icons/ai";
+import { BiLogOutCircle } from "react-icons/bi";
 import logo from '../../../../src/assets/logo/Logo.jpg'
 import a from '../../../assets/NavBarImg/a.png'
 import b from '../../../assets/NavBarImg/b.png'
 import c from '../../../assets/NavBarImg/c.png'
 import d from '../../../assets/NavBarImg/d.png'
 import e from '../../../assets/NavBarImg/e.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error));
+    }
 
     return (
         <div>
@@ -25,7 +35,14 @@ const NavBar = () => {
                             <li><NavLink to="/RajnoitikDol"><img className="h-4 w-4" src={b} alt="" />রাজনৈতিক দল</NavLink></li>
                             <li><NavLink to="/NirbachoniIstehar"><img className="h-4 w-4" src={c} alt="" />নির্বাচনী ইস্তেহার</NavLink></li>
                             <li><NavLink to="/NirbachoniSongbad"><img className="h-4 w-4" src={d} alt="" />নির্বাচনী সংবাদ</NavLink></li>
-                            <li><NavLink to="/Login"><AiOutlineLogin />লগ-ইন</NavLink></li>
+                            {/* <li><NavLink to="/Login"><AiOutlineLogin />লগ-ইন</NavLink></li> */}
+                            {
+                                user ? <>
+                                    <button className="ms-3 font-semibold" onClick={handleLogOut}><span className="flex items-center gap-1 text-xs"><BiLogOutCircle />লগ-আউট</span></button>
+                                </> : <>
+                                    <li className=""><NavLink to="/Login"><AiOutlineLogin /><span className="text-xs font-semibold">লগ-ইন</span></NavLink></li>
+                                </>
+                            }
 
                         </ul>
                     </div>
@@ -41,7 +58,14 @@ const NavBar = () => {
                         <li className="border-e-2 border-slate-400"><NavLink to="/RajnoitikDol"><img className="h-8 w-8" src={b} alt="" /><span className="text-xs font-semibold">রাজনৈতিক<br />দল</span></NavLink></li>
                         <li className="border-e-2 border-slate-400"><NavLink to="/NirbachoniIstehar"><img className="h-8 w-8" src={c} alt="" /><span className="text-xs font-semibold">নির্বাচনী<br />ইস্তেহার</span></NavLink></li>
                         <li className="border-e-2 border-slate-400"><NavLink to="/NirbachoniSongbad"><img className="h-8 w-8" src={d} alt="" /><span className="text-xs font-semibold">নির্বাচনী<br />সংবাদ</span></NavLink></li>
-                        <li><NavLink to="/Login"><AiOutlineLogin /><span className="text-xs font-semibold">লগ-ইন</span></NavLink></li>
+
+                        {
+                            user ? <>
+                                <button className="ms-3 font-semibold" onClick={handleLogOut}><span className="flex items-center gap-1 text-xs"><BiLogOutCircle />লগ-আউট</span></button>
+                            </> : <>
+                                <li className=""><NavLink to="/Login"><AiOutlineLogin /><span className="text-xs font-semibold">লগ-ইন</span></NavLink></li>
+                            </>
+                        }
                     </ul>
                 </div>
             </div>
