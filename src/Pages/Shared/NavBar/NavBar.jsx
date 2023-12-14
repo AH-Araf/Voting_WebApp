@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import './NavBar.css'
+import { AiOutlineLogin } from "react-icons/ai";
 import logo from '../../../../src/assets/logo/Logo.jpg'
 import a from '../../../assets/NavBarImg/a.png'
 import b from '../../../assets/NavBarImg/b.png'
@@ -19,12 +20,12 @@ const NavBar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-60">
-                            <li><NavLink to="/">হোম পেজ</NavLink></li>
-                            <li><NavLink to="/NirbachoniElaka">নির্বাচনী এলাকা</NavLink></li>
-                            <li><NavLink to="/RajnoitikDol">রাজনৈতিক দল</NavLink></li>
-                            <li><NavLink to="/NirbachoniIstehar">নির্বাচনী ইস্তেহার</NavLink></li>
-                            <li><NavLink to="/NirbachoniSongbad">নির্বাচনী সংবাদ</NavLink></li>
-                            <li><NavLink to="/Login">লগ-ইন</NavLink></li>
+                            <li><NavLink to="/"><img className="h-4 w-4" src={e} alt="" />হোম পেজ</NavLink></li>
+                            <li><NavLink to="/NirbachoniElaka"><img className="h-4 w-4" src={a} alt="" />নির্বাচনী এলাকা</NavLink></li>
+                            <li><NavLink to="/RajnoitikDol"><img className="h-4 w-4" src={b} alt="" />রাজনৈতিক দল</NavLink></li>
+                            <li><NavLink to="/NirbachoniIstehar"><img className="h-4 w-4" src={c} alt="" />নির্বাচনী ইস্তেহার</NavLink></li>
+                            <li><NavLink to="/NirbachoniSongbad"><img className="h-4 w-4" src={d} alt="" />নির্বাচনী সংবাদ</NavLink></li>
+                            <li><NavLink to="/Login"><AiOutlineLogin />লগ-ইন</NavLink></li>
 
                         </ul>
                     </div>
@@ -40,7 +41,7 @@ const NavBar = () => {
                         <li className="border-e-2 border-slate-400"><NavLink to="/RajnoitikDol"><img className="h-8 w-8" src={b} alt="" /><span className="text-xs font-semibold">রাজনৈতিক<br />দল</span></NavLink></li>
                         <li className="border-e-2 border-slate-400"><NavLink to="/NirbachoniIstehar"><img className="h-8 w-8" src={c} alt="" /><span className="text-xs font-semibold">নির্বাচনী<br />ইস্তেহার</span></NavLink></li>
                         <li className="border-e-2 border-slate-400"><NavLink to="/NirbachoniSongbad"><img className="h-8 w-8" src={d} alt="" /><span className="text-xs font-semibold">নির্বাচনী<br />সংবাদ</span></NavLink></li>
-                        <li><NavLink to="/Login"><span className="text-xs font-semibold">লগ-ইন</span></NavLink></li>
+                        <li><NavLink to="/Login"><AiOutlineLogin /><span className="text-xs font-semibold">লগ-ইন</span></NavLink></li>
                     </ul>
                 </div>
             </div>

@@ -8,9 +8,9 @@ const HomeBanner = () => {
         <div>
             <div className="container">
                 <img src={bannerImg} alt="Norway" />
-                <div className="text-block">
-                    <h4>Nature</h4>
-                    <p>What a beautiful sunrise</p>
+                <div className="text-block text-lg font-serif bg-slate-400 bg-opacity-10 p-5 rounded-lg">
+                    <p>After receiving the data from backend,</p>
+                    <p>the rest of th details will be shown here.</p>
                 </div>
             </div>
 
