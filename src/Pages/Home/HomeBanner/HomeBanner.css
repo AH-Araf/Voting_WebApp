@@ -1,8 +1,12 @@
-.container {
+/* .container {
     position: relative;
+    width: 100%;
+} */
+.home-banner-img {
+    width: 100%;
+  
 }
 
-/* Bottom right text */
 .text-block {
     position: absolute;
     top: 50%;

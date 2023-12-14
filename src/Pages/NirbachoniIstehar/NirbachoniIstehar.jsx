@@ -4,7 +4,7 @@ import IsteharForm from '../../assets/IsteharForm/IsteharForm.pdf'
 
 const NirbachoniIstehar = () => {
     return (
-        <div className="mt-20">
+        <div data-aos="zoom-in-up" className="mt-20">
             <div className="text-center text-lg">
                 <Link className="btn btn-active btn-success text-white" to='/NirbachoniIsteharForm'>নির্বাচনী ইস্তেহার ফর্ম</Link>
                 <p className="text-xs font-semibold mt-12">ভোটার হওয়ার যোগ্য নাগরিকদের তথ্য সংগ্রহের জন্য একটি নতুন ফরম তৈরি করা হয়েছে। প্রতিটি ফরমে নম্বরযুক্ত এবং প্রশাসনের ক্ষুদ্রতম ইউনিটের জিওকোড এর সাথে সামঞ্জস্যপূর্ণ।</p>

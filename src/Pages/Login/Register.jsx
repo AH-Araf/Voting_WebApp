@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
     return (
-        <div className='bg-img pb-20'>
+        <div className='bg-img pb-20' data-aos="zoom-in-up">
             <div className="flex flex-col items-center">
                 <p className="mt-16 mb-5 text-xl font-bold">রেজিষ্ট্রেশন করুন</p>
                 <form>

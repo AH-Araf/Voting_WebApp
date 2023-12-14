@@ -10,7 +10,10 @@ const Home = () => {
             <HomeBanner></HomeBanner>
             <Candidates></Candidates>
             <HomeDetails></HomeDetails>
-            <ContactInfo></ContactInfo>
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <ContactInfo></ContactInfo>
+            </div>
+
         </div>
     );
 };

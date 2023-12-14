@@ -6,7 +6,7 @@ const Candidates = () => {
   return (
     <div className="flex justify-around mt-28">
 
-      <div>
+      <div data-aos="fade-right">
         <div className="relative bg-emerald-200 p-2 py-8 rounded-lg">
           <VoteFavCandidates></VoteFavCandidates>
           <h2 className="rounded-lg -top-7 absolute border  p-2 bg-emerald-800  text-white ">
@@ -20,7 +20,7 @@ const Candidates = () => {
         </div>
       </div>
 
-      <div>
+      <div data-aos="fade-left">
         <div className="relative bg-red-100 p-2 py-8 rounded-lg">
           <CountryTopCandidates></CountryTopCandidates>
           <h2 className="rounded-lg -top-7 absolute border  p-2 bg-red-600  text-white ">

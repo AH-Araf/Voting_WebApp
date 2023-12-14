@@ -5,7 +5,7 @@ import { IoIosMail } from "react-icons/io";
 
 const Login = () => {
     return (
-        <div>
+        <div data-aos="zoom-in-up">
             <div className="flex justify-center gap-12 items-center">
                 {/*  */}
                 <div className='flex justify-center py-6 '>
