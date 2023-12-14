@@ -2,15 +2,20 @@ import bannerImg from '../../../assets/banner/Banner.jpg'
 import './HomeBanner.css'
 import { RiWhatsappFill } from "react-icons/ri";
 import { IoIosMail } from "react-icons/io";
+import Countdown from '../Countdown/Countdown';
+import date from '../../../assets/images/date.png'
 
 const HomeBanner = () => {
     return (
         <div>
             <div>
                 <img className='home-banner-img' src={bannerImg} alt="Norway" />
-                <div className="text-block text-lg font-serif bg-slate-400 bg-opacity-10 p-5 rounded-lg">
-                    <p>After receiving the data from backend,</p>
-                    <p>the rest of th details will be shown here.</p>
+                <div className="text-block text-lg font-serif  bg-opacity-10 p-5 rounded-lg">
+                    <div className='flex gap-4'>
+                        <img className='h-18 w-24' src={date} alt="" />
+                        <Countdown></Countdown>
+                    </div>
+
                 </div>
             </div>
 
