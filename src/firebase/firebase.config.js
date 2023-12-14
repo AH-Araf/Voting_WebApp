@@ -1,14 +1,13 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBKS1rkbmWZD_iN1MJ0-yrJ3qv5DHkYZcc",
-  authDomain: "votekoren.firebaseapp.com",
-  projectId: "votekoren",
-  storageBucket: "votekoren.appspot.com",
-  messagingSenderId: "954271290762",
-  appId: "1:954271290762:web:27d6e6a9d8d5e95e116473"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 const app = initializeApp(firebaseConfig);
-
 export default app;

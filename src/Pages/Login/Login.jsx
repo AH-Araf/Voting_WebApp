@@ -1,9 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginPageimg from '../../assets/images/loginPageImg.png'
 import { RiWhatsappFill } from "react-icons/ri";
 import { IoIosMail } from "react-icons/io";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
+    const { signIn } = useContext(AuthContext)
+    const navigate = useNavigate();
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                Swal.fire({
+                    title: 'User Login Successful.',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                navigate('/');
+            })
+    }
     return (
         <div data-aos="zoom-in-up">
             <div className="flex justify-center gap-12 items-center">
@@ -33,15 +60,15 @@ const Login = () => {
                 <div>
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <div className="card w-96 max-w-sm shadow-2xl bg-base-100">
-                            <form className="card-body">
+                            <form onSubmit={handleLogin} className="card-body">
                                 <div className="form-control">
-                                    <input type="email" name="email" placeholder="Email" className="input input-bordered" />
+                                    <input type="email" name="email" placeholder="ইমেইল" className="input input-bordered" />
                                 </div>
 
                                 <div className="form-control">
-                                    <input type="password" name="password" placeholder="Password" className="input input-bordered" />
+                                    <input type="password" name="password" placeholder="পাসওয়ার্ড" className="input input-bordered" />
                                 </div>
-                                <input className="btn btn-success text-white" type="submit" value="Login" />
+                                <input className="btn btn-success text-white" type="submit" value="লগ-ইন" />
                                 <p><small>New Here? <Link to='/Register'><span className='text-blue-700 font-bold'>Create an account</span></Link></small></p>
                             </form>
                         </div>

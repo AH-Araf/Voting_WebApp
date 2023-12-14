@@ -38,9 +38,9 @@ const NavBar = () => {
                             {/* <li><NavLink to="/Login"><AiOutlineLogin />লগ-ইন</NavLink></li> */}
                             {
                                 user ? <>
-                                    <button className="ms-3 font-semibold" onClick={handleLogOut}><span className="flex items-center gap-1 text-xs"><BiLogOutCircle />লগ-আউট</span></button>
+                                    <button className="ms-3 " onClick={handleLogOut}><span className="flex items-center gap-1"><BiLogOutCircle />লগ-আউট</span></button>
                                 </> : <>
-                                    <li className=""><NavLink to="/Login"><AiOutlineLogin /><span className="text-xs font-semibold">লগ-ইন</span></NavLink></li>
+                                    <li className=""><NavLink to="/Login"><AiOutlineLogin /><span className="">লগ-ইন</span></NavLink></li>
                                 </>
                             }
 

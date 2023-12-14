@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
-
 import NirbachoniElaka from "../Pages/NirbachoniElaka/NirbachoniElaka";
 import RajnoitikDol from "../Pages/RajnoitikDol/RajnoitikDol";
 import NirbachoniIstehar from "../Pages/NirbachoniIstehar/NirbachoniIstehar";
