@@ -1,10 +1,47 @@
-.digit-box {
-    border: 2px solid #000;
-    padding: 2px;
-    margin: 2px;
+/* .digit-box {
+    border: 2px solid rgb(4, 80, 4);
+    padding: 0px;
+    margin: 1px;
     width: 25px;
 }
 .label {
-    margin-top: 4px;
+    margin-top: 2px;
     font-size: 14px;
 }
+.countdown-clock{
+    width:10px;
+} */
+/* Countdown.css */
+
+
+/* Countdown.css */
+.digit-box {
+    border: 2px solid rgb(4, 80, 4);
+    padding: 0px;
+    margin: 1px;
+    width: 25px;
+    height: 25px; /* Set the height to match the width for a square shape */
+  }
+  
+  .label {
+    margin-top: 2px;
+    font-size: 14px;
+  }
+  
+  .countdown-clock {
+    width: 50%; /* Set the width to 50% for responsiveness */
+  }
+  
+  /* Media query for 600px devices */
+  @media (max-width: 600px) {
+    .digit-box {
+      width: 12.5px; /* 50% of the original width */
+      height: 12.5px; /* 50% of the original height */
+      font-size: 10px; /* Adjust the font size for smaller devices */
+    }
+  
+    .label {
+      font-size: 10px; /* Adjust the font size for smaller devices */
+    }
+  }
+  

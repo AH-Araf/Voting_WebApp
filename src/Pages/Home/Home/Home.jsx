@@ -1,15 +1,16 @@
 import Candidates from "../Candidates/Candidates";
 import ContactInfo from "../ContactInfo/ContactInfo";
-// import Countdown from "../Countdown/Countdown";
 import HomeBanner from "../HomeBanner/HomeBanner";
 import HomeDetails from "../HomeDetails/HomeDetails";
+import SelectPlaceAndCountDown from "../SelectPlaceAndCountDown/SelectPlaceAndCountDown";
+
 
 
 const Home = () => {
     return (
         <div>
             <HomeBanner></HomeBanner>
-            {/* <Countdown></Countdown> */}
+            <SelectPlaceAndCountDown></SelectPlaceAndCountDown>
             <Candidates></Candidates>
             <HomeDetails></HomeDetails>
             <div data-aos="fade-up" data-aos-duration="3000">

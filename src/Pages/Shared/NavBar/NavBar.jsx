@@ -20,6 +20,8 @@ const NavBar = () => {
             .catch(error => console.log(error));
     }
 
+    
+
     return (
         <div>
             <div className="navbar border-b-2 ">
@@ -51,7 +53,7 @@ const NavBar = () => {
 
 
                 {/* Large Device navbar-center*/}
-                <div className="navbar-end hidden lg:flex">
+                <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li className="border-e-2 border-slate-400"><NavLink to="/"><img className="h-8 w-8" src={e} alt="" /><span className="text-xs font-semibold">হোম<br />পেজ</span></NavLink></li>
                         <li className="border-e-2 border-slate-400"><NavLink to="/NirbachoniElaka"><img className="h-8 w-8" src={a} alt="" /><span className="text-xs font-semibold">নির্বাচনী<br />এলাকা</span></NavLink></li>

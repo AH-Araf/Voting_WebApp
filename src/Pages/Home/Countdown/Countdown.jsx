@@ -14,7 +14,7 @@ const Countdown = () => {
     }, []);
 
     function calculateTimeLeft() {
-        const targetDate = moment('2024-01-07'); 
+        const targetDate = moment('2024-01-07');
         const now = moment();
         const duration = moment.duration(targetDate.diff(now));
         const days = formatNumber(Math.floor(duration.asDays()));
@@ -36,37 +36,39 @@ const Countdown = () => {
             </div>
         ));
     };
-       
+
     return (
-        <div className="flex gap-4 font-bold">
-            <div className='flex flex-col items-center text-green-700'>
-                <div className="flex">
-                    {renderDigitBoxes(timeLeft.days)}
+        <div className='countdown-clock'>
+            <div className="flex gap-4 font-bold ">
+                <div className='flex flex-col items-center text-green-700'>
+                    <div className="flex">
+                        {renderDigitBoxes(timeLeft.days)}
+                    </div>
+                    <div className="label">দিন</div>
                 </div>
-                <div className="label">দিন</div>
-            </div>
 
-            <div className='flex flex-col items-center text-green-700'>
-                <div className="flex">
-                    {renderDigitBoxes(timeLeft.hours)}
+                <div className='flex flex-col items-center text-green-700'>
+                    <div className="flex">
+                        {renderDigitBoxes(timeLeft.hours)}
+                    </div>
+                    <div className="label">ঘন্টা</div>
                 </div>
-                <div className="label">ঘন্টা</div>
-            </div>
 
-            <div className='flex flex-col items-center text-green-700'>
-                <div className="flex">
-                    {renderDigitBoxes(timeLeft.minutes)}
+                <div className='flex flex-col items-center text-green-700'>
+                    <div className="flex">
+                        {renderDigitBoxes(timeLeft.minutes)}
+                    </div>
+                    <div className="label">মিনিট</div>
                 </div>
-                <div className="label">মিনিট</div>
-            </div>
 
-            <div className='flex flex-col items-center text-green-700'>
-                <div className="flex">
-                    {renderDigitBoxes(timeLeft.seconds)}
+                <div className='flex flex-col items-center text-green-700'>
+                    <div className="flex">
+                        {renderDigitBoxes(timeLeft.seconds)}
+                    </div>
+                    <div className="label">সেকেন্ড</div>
                 </div>
-                <div className="label">সেকেন্ড</div>
-            </div>
 
+            </div>
         </div>
     );
 };

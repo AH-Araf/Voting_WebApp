@@ -72,7 +72,7 @@ const Register = () => {
                         {errors.name && <span className="text-red-600">Name is required</span>}
                     </div>
 
-                    <div className="flex gap-5">
+                    <div className="email-phone-pass-section gap-5">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">ইমেইল</span>
@@ -88,7 +88,7 @@ const Register = () => {
                             {errors.mobile && <span className="text-red-600">Name is required</span>}
                         </div>
                     </div>
-                    <div className="flex gap-5">
+                    <div className="flex gap-5 email-phone-pass-section">
                         {/*  */}
                         <div className="form-control">
                             <label className="label">

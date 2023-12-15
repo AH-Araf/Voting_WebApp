@@ -35,7 +35,7 @@ const Login = () => {
         <div data-aos="zoom-in-up">
             <div className="flex justify-center gap-12 items-center">
                 {/*  */}
-                <div className='flex justify-center py-6 '>
+                <div className='flex justify-center py-6 hidden lg:block'>
                     <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><img className="h-60 w-70 rounded-lg" src={loginPageimg} alt="" /></button>
                     <dialog id="my_modal_1" className="modal">
                         <div className="modal-box">
@@ -76,7 +76,7 @@ const Login = () => {
                 </div>
 
                 {/*  */}
-                <div className='flex justify-center py-6 '>
+                <div className='flex justify-center py-6 hidden lg:block'>
                     <button className="" onClick={() => document.getElementById('my_modal_1').showModal()}><img className="h-60 w-70 rounded-lg" src={loginPageimg} alt="" /></button>
                     <dialog id="my_modal_1" className="modal">
                         <div className="modal-box">
