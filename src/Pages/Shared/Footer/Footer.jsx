@@ -1,9 +1,10 @@
+import './Footer.css'
 const Footer = () => {
 
     const date = new Date().getFullYear();
 
     return (
-        <section className="flex justify-around mt-20 pb-10 pt-10 bg-pink-50">
+        <section className="footer-section bg-pink-50">
             <div>
                 <p className="mb-5"><b>নির্বাচন সম্পর্কিত ওয়েবসাইটসমূহ</b></p>
                 <div className="text-sm text-gray-600">

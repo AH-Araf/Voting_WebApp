@@ -1,0 +1,12 @@
+.home-details-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-details-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px
+    }
+}

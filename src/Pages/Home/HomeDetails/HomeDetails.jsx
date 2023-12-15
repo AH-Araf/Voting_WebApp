@@ -1,5 +1,6 @@
 import { RiWhatsappFill } from "react-icons/ri";
 import { IoIosMail } from "react-icons/io";
+import './HomeDetails.css'
 
 const HomeDetails = () => {
     return (
@@ -9,7 +10,7 @@ const HomeDetails = () => {
                     <p className="text-xl font-bold text-green-700">নির্বাচনী এলাকা সংক্রান্ত তথ্যাদি</p>
                 </div>
 
-                <div className="flex justify-evenly mt-10">
+                <div className="home-details-section mt-10">
 
                     <div className="flex flex-col items-center">
                         <p className="font-semibold text-orange-600">ভোটার সংখ্যা</p>

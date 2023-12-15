@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
-import img from '../../../assets/a.jpg'
+import img from '../../../assets/a.jpg';
+import './Candidates.css';
 
 const CountryTopCandidates = () => {
     const [candidates, setCandidates] = useState([]);
@@ -8,7 +9,7 @@ const CountryTopCandidates = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://172.105.116.39:8000/api/user/public/candidates/', {
+                const response = await fetch('http://172.105.116.39:8000/api/user/private/candidates/', {
                     method: 'get',
                 });
 
@@ -32,46 +33,89 @@ const CountryTopCandidates = () => {
     return (
         <div>
             <div>
-                <ul className='mb-3'>
+                {/* <ul className='mb-3 border-b-2 border-slate-400'>
                     {candidates.map((candidate) => (
                         <li key={candidate.first_name}>
                             <div>
-                                <div className=' w-96 h-28 rounded-xl flex items-center justify-between p-5'>
-                                    {/* candidate.candidate_photo */}
-                                    {/* <img src={candidate.political_party.logo} /> */}
+                                <div className=' top-candidate p-5'>
                                     <img className='w-1/5 h-20px rounded-xl' src={img} alt="" />
 
                                     <div className=''>
                                         <p><b>{candidate.political_party.name}</b></p>
                                         <p>{`${candidate.first_name} ${candidate.last_name}`}</p>
-                                        <p className='text-sm'><span className='me-7'>🟢এমপি পদপ্রার্থী</span><span>🔵রাজশাহী বিভাগ{candidate.votes_gained}</span></p>
+                                        <p className='text-xs'><span className='me-7'>🟢এমপি পদপ্রার্থী</span><span>🔵রাজশাহী{candidate.votes_gained}</span></p>
 
                                     </div>
                                 </div>
                             </div>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
+
                 {/*  */}
-                <ul>
-                    {candidates.map((candidate) => (
-                        <li key={candidate.first_name}>
+                <ul className='border-b-2 border-slate-300'>
+                        <li>
                             <div>
-                                <div className=' w-96 h-28 rounded-xl flex items-center justify-between p-5'>
-                                    {/* candidate.candidate_photo */}
-                                    {/* <img src={candidate.political_party.logo} /> */}
+                                <div className=' top-candidate p-5'>
                                     <img className='w-1/5 h-20px rounded-xl' src={img} alt="" />
-
                                     <div className=''>
-                                        <p><b>{candidate.political_party.name}</b></p>
-                                        <p>{`${candidate.first_name} ${candidate.last_name}`}</p>
-                                        <p className='text-sm'><span className='me-7'>🟢এমপি পদপ্রার্থী</span><span>🔵রাজশাহী বিভাগ{candidate.votes_gained}</span></p>
+                                        {/* <p><b>{candidate.political_party.name}</b></p>
+                                        <p>{`${candidate.first_name} ${candidate.last_name}`}</p> */}
+                                        <p>Gwendolyn Holmes</p>
+                                        <p className='text-xs'><span className='me-7'>🟢এমপি পদপ্রার্থী</span><span>🔵রাজশাহী</span></p>
 
                                     </div>
                                 </div>
                             </div>
                         </li>
-                    ))}
+                </ul>
+                <ul className='border-b-2 border-slate-300'>
+                        <li>
+                            <div>
+                                <div className=' top-candidate p-5'>
+                                    <img className='w-1/5 h-20px rounded-xl' src={img} alt="" />
+                                    <div className=''>
+                                        {/* <p><b>{candidate.political_party.name}</b></p>
+                                        <p>{`${candidate.first_name} ${candidate.last_name}`}</p> */}
+                                        <p>Gwendolyn Holmes</p>
+                                        <p className='text-xs'><span className='me-7'>🟢এমপি পদপ্রার্থী</span><span>🔵রাজশাহী</span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+                <ul className='border-b-2 border-slate-300'>
+                        <li>
+                            <div>
+                                <div className=' top-candidate p-5'>
+                                    <img className='w-1/5 h-20px rounded-xl' src={img} alt="" />
+                                    <div className=''>
+                                        {/* <p><b>{candidate.political_party.name}</b></p>
+                                        <p>{`${candidate.first_name} ${candidate.last_name}`}</p> */}
+                                        <p>Gwendolyn Holmes</p>
+                                        <p className='text-xs'><span className='me-7'>🟢এমপি পদপ্রার্থী</span><span>🔵রাজশাহী</span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+                <ul className='border-b-2 border-slate-300'>
+                        <li>
+                            <div>
+                                <div className=' top-candidate p-5'>
+                                    <img className='w-1/5 h-20px rounded-xl' src={img} alt="" />
+                                    <div className=''>
+                                        {/* <p><b>{candidate.political_party.name}</b></p>
+                                        <p>{`${candidate.first_name} ${candidate.last_name}`}</p> */}
+                                        <p>Gwendolyn Holmes</p>
+                                        <p className='text-xs'><span className='me-7'>🟢এমপি পদপ্রার্থী</span><span>🔵রাজশাহী</span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                 </ul>
                 {/*  */}
             </div>

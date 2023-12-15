@@ -1,0 +1,64 @@
+.candidates-main-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.fav-candidate-body {
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.vote-fav-candidate {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    border-radius: 10px;
+}
+.top-candidate-body{
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.top-candidate {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    border-radius: 10px;
+}
+
+.finger-print-btn {
+    display: flex;
+    justify-content: center;
+   
+}
+
+@media only screen and (max-width: 600px) {
+    .candidates-main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .vote-fav-candidate {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    .finger-print-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-candidate {
+        margin-bottom: 50px;
+    }
+
+}
