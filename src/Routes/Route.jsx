@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import Home from "../Pages/Home/Home/Home";
 import NirbachoniIsteharForm from "../Pages/NirbachoniIstehar/NirbachoniIsteharForm";
 import Register from "../Pages/Login/Register";
+import MainSingleNews from "../Pages/NirbachoniSongbad/MainSingleNews";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,12 @@ export const router = createBrowserRouter([
           {
             path: "/NirbachoniSongbad",
             element: <NirbachoniSongbad></NirbachoniSongbad>,
+            loader: () => fetch('http://172.105.116.39:8000/api/news/public/news/'),
+          },
+          {
+            path: "/MainSingleNews/:id",
+            element: <MainSingleNews></MainSingleNews>,
+            loader: async ({params})  => fetch(`http://172.105.116.39:8000/api/news/public/news/${params.id}`),
           },
           {
             path: "/Login",

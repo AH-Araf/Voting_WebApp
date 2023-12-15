@@ -3,7 +3,10 @@ import dateImg from '../../../assets/images/date.png'
 import SelectPlace from "../SelectPlace/SelectPlace";
 import './SelectPlaceAndCountDown.css'
 
+
 const SelectPlaceAndCountDown = () => {
+    
+
     return (
         <div className="SelectPlaceAndCountDown-section  bg-green-50">
             <div>

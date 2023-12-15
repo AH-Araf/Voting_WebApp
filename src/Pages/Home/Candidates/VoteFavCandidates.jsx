@@ -20,7 +20,7 @@ const VoteFavCandidates = () => {
                 }
 
                 const data = await response.json();
-                console.log(data);
+                // console.log(data);
                 setCandidates(data);
             } catch (error) {
                 console.error('Error fetching data:', error);
