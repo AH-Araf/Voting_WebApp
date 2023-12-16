@@ -1,68 +1,20 @@
 import { useForm } from 'react-hook-form';
 import './LoginRegister.css'
-import { Link, useNavigate } from "react-router-dom";
-import { useContext } from 'react';
-import { AuthContext } from '../../providers/AuthProvider';
-import Swal from 'sweetalert2';
-import SocialLogin from './SocialLogin';
+import { Link } from "react-router-dom";
+
 
 const Register = () => {
 
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const { createUser, updateUserProfile } = useContext(AuthContext);
-    const navigate = useNavigate();
+    const { register,  formState: { errors } } = useForm();
 
-    const onSubmit = data => {
-
-        createUser(data.email, data.password)
-            .then(result => {
-
-                const loggedUser = result.user;
-                console.log(loggedUser);
-
-                updateUserProfile(data.name)
-                    .then(() => {
-                        const saveUser = { 
-                            name: data.name,
-                            email: data.email,
-                            mobile: data.mobile,
-                            password: data.password,
-                            RePassword: data.RePassword,
-                            NID: data.NID,
-                            role: 'user' }
-
-                        fetch('http://localhost:5000/users', {
-                            method: 'POST',
-                            headers: {
-                                'content-type': 'application/json'
-                            },
-                            body: JSON.stringify(saveUser)
-                        })
-                            .then(res => res.json())
-                            .then(data => {
-                                if (data.insertedId) {
-                                    reset();
-                                    Swal.fire({
-                                        position: 'center',
-                                        icon: 'success',
-                                        title: 'User created successfully.',
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    });
-                                    navigate('/');
-                                }
-                            })
-                    })
-                    .catch(error => console.log(error))
-            })
-    };
+    
 
 
     return (
         <div className='bg-img pb-20' data-aos="zoom-in-up">
             <div className="flex flex-col items-center">
                 <p className="mt-16 mb-5 text-xl font-bold">রেজিষ্ট্রেশন করুন</p>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form>
 
                     <div className="form-control">
                         <label className="label">
@@ -126,7 +78,6 @@ const Register = () => {
                     <input className="btn btn-success text-white mt-5" type="submit" value="রেজিষ্ট্রেশন করুন" />
                     <p><small>Already have an account? <Link to='/Login'><span className='text-blue-700 font-bold'>Login Now</span></Link></small></p>
                 </form>
-                <SocialLogin></SocialLogin>
             </div>
         </div>
     );

@@ -75,10 +75,10 @@ const ContactInfo = () => {
                             <select
                                 {...register('subject_type')}
                                 className="select input-bordered w-full max-w-xs">
-                                {<option>politician</option>}
-                                {<option>voter</option>}
-                                {<option>vote_worker</option>}
-                                {<option>others</option>}
+                                {<option>Politician</option>}
+                                {<option>Voter</option>}
+                                {<option>Vote Worker</option>}
+                                {<option>Others</option>}
                             </select>
                         </div>
 

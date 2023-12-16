@@ -4,10 +4,9 @@ import SingleRajnoitikDol from "./SingleRajnoitikDol";
 
 const RajnoitikDol = () => {
     const politicalParties = useLoaderData();
-    // console.log(politicalParties);
+    console.log(politicalParties);
     return (
-        <div>
-            <p>RajnoitikDol</p>
+        <div className='SingleRajnoitikDol-section'>
             {politicalParties.map((a) => (
                 <SingleRajnoitikDol key={a.id} a={a} />
             ))}

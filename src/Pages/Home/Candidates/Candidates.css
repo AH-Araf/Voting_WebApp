@@ -5,9 +5,7 @@
 }
 
 .fav-candidate-body {
-    height: 400px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    
 }
 
 .vote-fav-candidate {
@@ -31,7 +29,7 @@
 .finger-print-btn {
     display: flex;
     justify-content: center;
-   
+   align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
