@@ -1,6 +1,7 @@
 import CountryTopCandidates from "./CountryTopCandidates";
 import VoteFavCandidates from "./VoteFavCandidates";
 import './Candidates.css'
+import HomeTopNews from "../HomeTopNews/HomeTopNews";
 
 
 const Candidates = () => {
@@ -33,7 +34,7 @@ const Candidates = () => {
         <div className="mt-5">
           <div className="flex justify-center items-center flex-col">
             <p className="text-md text-green-600 font-bold"><u>সর্বশেষ সেরা খবর</u></p>
-            <p className="font-semibold text-red-600">Data will come from backend</p>
+            <HomeTopNews></HomeTopNews>
           </div>
         </div>
       </div>
